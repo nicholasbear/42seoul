@@ -16,7 +16,6 @@
 # include "./mlx/mlx.h"
 # include "get_next_line.h"
 # include <fcntl.h>
-# include <stdio.h>
 
 # define KEY_ESC		53
 # define KEY_W			13
@@ -24,7 +23,7 @@
 # define KEY_S			1
 # define KEY_D			2
 
-typedef struct game_info
+typedef struct s_game
 {
 	void	*mlx;
 	void	*mlx_win;
@@ -36,4 +35,24 @@ typedef struct game_info
 	int		point_count;
 	int		walk_count;
 	char	*map;
-}	game_info;
+	t_img	*img;
+}	t_game;
+
+typedef struct s_img
+{
+	void	*empty;
+	void	*end;
+	void	*item;
+	void	*player;
+	void	*wall;
+}			t_img;
+
+
+void	check_map_name(char *str);
+void	game_init(t_game *game, char *map);
+void	map_read(int fd, t_game *game);
+
+
+
+
+#endif

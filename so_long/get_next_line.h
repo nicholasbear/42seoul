@@ -21,7 +21,6 @@
 #  define OPEN_MAX 256
 # endif
 
-# include <unistd.h>
 # include <stdlib.h>
 
 char	*get_next_line(int fd);
