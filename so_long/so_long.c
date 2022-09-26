@@ -69,14 +69,14 @@ void	map_read(int fd, t_game *game)
 
 	height = 1;
 	buf = get_next_line(fd);
-	get_map_oneline(buf, height, game, flag);
+	get_map_oneline(buf, height, game);
 	while (buf)
 	{
 		height++;
 		buf = get_next_line(fd);
 		if (!buf)
 			break ;
-		get_map_oneline(buf, height, game, flag);
+		get_map_oneline(buf, height, game);
 	}
 	close(fd);
 }
