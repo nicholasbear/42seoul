@@ -64,8 +64,8 @@ t_img	img_init(void *mlx);
 void	setting_img(t_game *game);
 void	put_img(t_game *g, int w, int h);
 void	clear_game(t_game *game);
-int	keypress_event(int key, t_game *game);
-int	click_redcross(t_game *game);
+int		keypress_event(int key, t_game *game);
+int		click_redcross(t_game *game);
 void	press_key(t_game *game, int move);
 
 #endif
