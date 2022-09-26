@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wookim2 <wookim2@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nicholasbear <nicholasbear@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 15:56:00 by wookim2           #+#    #+#             */
-/*   Updated: 2022/08/22 16:06:39 by wookim2          ###   ########.fr       */
+/*   Updated: 2022/09/27 03:43:29 by nicholasbea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # endif
 
 # include <stdlib.h>
-//# include <unistd.h>
+# include <unistd.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(char *s);

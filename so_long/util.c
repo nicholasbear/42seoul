@@ -1,15 +1,5 @@
 #include "so_long.h"
 
-int	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 int	ft_strlen_without_nl(char *str)
 {
 	size_t	i;
@@ -45,9 +35,7 @@ char	*ft_strdup_without_nl(char	*s1)
 void	ft_strlcpy_without_nl(char *dest, char *src, int read_len)
 {
 	int		i;
-	size_t	src_len;
 
-	src_len = ft_strlen_without_nl(src);
 	i = 0;
 	while (src[i] && src[i] != '\n' && i + 1 < read_len)
 	{

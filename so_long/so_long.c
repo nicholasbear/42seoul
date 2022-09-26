@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wookim2 <wookim2@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: nicholasbear <nicholasbear@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:22:57 by wookim2           #+#    #+#             */
-/*   Updated: 2022/09/25 17:23:00 by wookim2          ###   ########.fr       */
+/*   Updated: 2022/09/27 03:48:07 by nicholasbea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ int	main(int argc, char **argv)
 	t_game	*game;
 	
 	if (argc != 2)
-		print_errors("Error not one map\n");
+		printf("Error not one map\n");
 	check_map_name(argv[1]);
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
-		print_errors("Error no file\n");
+		printf("Error no file\n");
 	game = (t_game *)malloc(sizeof(t_game));
-	game_init(game, argv[1]);
 	map_read(fd, game);
+	game_init(game);
 	map_error(game);
 	mlx_hook(game->mlx_win, KEY_PRESS, 0, &keypress_event, game);
 	mlx_hook(game->mlx_win, KEY_EXIT, 0, &click_redcross, game);
@@ -49,10 +49,10 @@ void	check_map_name(char *str)
 	}
 	i = ft_strlen(str);
 	if (str[i - 3] != 'b' || str[i - 2] != 'e' || str[i - 1] != 'r' || j != 3)
-		print_errors("not a ber file\n");
+		printf("not a ber file\n");
 }
 
-void	game_init(t_game *game, char *map)
+void	game_init(t_game *game)
 {
 	game->mlx = mlx_init();
 	game->img = img_init(game->mlx);

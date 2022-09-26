@@ -8,7 +8,7 @@ void	get_map_oneline(char *buf, int height, t_game *game)
 	if (height == 1)
 		game->width = width;
 	else if (game->width != width)
-		print_errors("it's not a rectangular\n");
+		printf("it's not a rectangular\n");
 	game->height = height;
 	game->map = ft_strjoin_without_nl(game->map, buf);
 	free(buf);
@@ -16,9 +16,9 @@ void	get_map_oneline(char *buf, int height, t_game *game)
 
 void    map_error(t_game *game)
 {
-    check_wall(game);
+    check(game);
     if (game->c_count < 1 || game->p_count != 1 || game->e_count < 1)
-		print_errors("map error\n");
+		printf("map error\n");
 }
 
 void	check(t_game *game)
@@ -29,16 +29,22 @@ void	check(t_game *game)
 	while (game->map[i])
 	{
         if (check_char(game->map[i]))
-				print_errors("invalid charaters\n");
+				printf("invalid charaters\n");
 		if (i >= 0 && i < game->width)
+		{
             if(game->map[i] != '1')
-			    print_errors("first line must be fill with a wall\n");
+			    printf("first line must be fill with a wall\n");
+		}
         if (i >= game->width * (game->height - 1) && i < game->width * game->height)
+		{
             if(game->map[i] != '1')
-                print_errors("last line must be fill with a wall\n");
+                printf("last line must be fill with a wall\n");
+		}
 		if (i % game->width == 0 || i % game->width == game->width - 1)
+		{
             if(game->map[i] != '1')
-                print_errors("first and last one must be a wall\n");
+                printf("first and last one must be a wall\n");
+		}
 		counting_char(game->map[i], game);
 		i++;
 	}

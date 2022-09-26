@@ -26,7 +26,7 @@ int	click_redcross(t_game *game)
 
 void	press_key(t_game *game, int move)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < ft_strlen(game->map))

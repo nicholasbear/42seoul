@@ -1,0 +1,362 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue Sep 27 03:52:11 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:
+# default
+.SHELLFLAGS := -c
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /home/nicholasbear/42seoul/so_long
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"ko","availableLanguages":{"*":"ko"},"_languagePackId":"d4733d4bd5138ffb2c9d12a76b2e9102.ko","_translationsConfigFile":"/home/nicholasbear/.vscode-server/data/clp/d4733d4bd5138ffb2c9d12a76b2e9102.ko/tcf.json","_cacheRoot":"/home/nicholasbear/.vscode-server/data/clp/d4733d4bd5138ffb2c9d12a76b2e9102.ko","_resolvedLanguagePackCoreLocation":"/home/nicholasbear/.vscode-server/data/clp/d4733d4bd5138ffb2c9d12a76b2e9102.ko/74b1f979648cc44d385a2286793c226e611f59e7","_corruptedFile":"/home/nicholasbear/.vscode-server/data/clp/d4733d4bd5138ffb2c9d12a76b2e9102.ko/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /mnt/c/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin/code
+# makefile (from 'Makefile', line 2)
+CFLAGS = -Wall -Wextra -Werror
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# makefile (from 'Makefile', line 12)
+OBJS = $(SRCS:.c=.o)
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /mnt/c/Users/nicho/AppData/Local/Programs/Microsoft VS Code
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/nicholasbear/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/bin/remote-cli:/home/nicholasbear/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.827.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Java/jdk-18.0.1/bin:/mnt/c/Program Files/Amazon/AWSCLIV2/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/PuTTY/:/mnt/c/Program Files/nodejs/:/mnt/c/MinGW/bin:/mnt/c/Users/nicho/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/nicho/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/nicho/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/nicho/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/nicho/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nicho/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/nicho/.dotnet/tools:/mnt/c/Users/nicho/AppData/Roaming/npm:/snap/bin
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
+%F = $(notdir $%)
+# environment
+PWD = /home/nicholasbear/42seoul/so_long
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-521b9734-6c41-4d8d-b21d-b2c2f21618fd.sock
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/nicholasbear
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = nicholasbear
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from 'Makefile', line 4)
+SRCS = so_long.c get_next_line.c get_next_line_utils.c check_map.c image.c key_press.c util.c 
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 1)
+CC = gcc
+# default
+MAKE_VERSION := 4.1
+# environment
+USER = nicholasbear
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 3)
+NAME = so_long
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/nicho/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+WSL_DISTRO_NAME = Ubuntu-18.04
+# variable set hash-table stats:
+# Load=65/1024=6%, Rehash=0, Collisions=5/100=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2, inode 3377699721138453): 21 files, no impossibilities.
+
+# 21 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+image.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 02:51:47.4329534
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+key_press.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 02:51:47.4369426
+#  File has been updated.
+#  Successfully updated.
+
+all: so_long
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+check_map.o: check_map.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_map'
+#  Last modified 2022-09-27 03:52:01.7905053
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+# Not a target:
+so_long.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 03:48:07.540125
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+get_next_line.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 02:51:47.4309593
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 03:51:42.5000143
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	rm -f $(NAME)
+
+get_next_line_utils.o: get_next_line_utils.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'get_next_line_utils'
+#  Last modified 2022-09-27 03:52:01.6919742
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+# Not a target:
+check_map.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 03:51:08.1859967
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+image.o: image.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'image'
+#  Last modified 2022-09-27 03:52:01.8867749
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	rm -f $(OBJS)
+
+key_press.o: key_press.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'key_press'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := key_press.o
+# automatic
+# % := 
+# automatic
+# * := key_press
+# automatic
+# + := key_press.c
+# automatic
+# | := 
+# automatic
+# < := key_press.c
+# automatic
+# ^ := key_press.c
+# automatic
+# ? := key_press.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+so_long: so_long.o get_next_line.o get_next_line_utils.o check_map.o image.o key_press.o util.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 17):
+	$(CC) -o $(NAME) $(OBJS) -L./ -lmlx -framework OpenGL -framework Appkit
+
+so_long.o: so_long.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'so_long'
+#  Last modified 2022-09-27 03:52:01.5234753
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+# Not a target:
+get_next_line_utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-09-27 02:51:47.4319563
+#  File has been updated.
+#  Successfully updated.
+
+get_next_line.o: get_next_line.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'get_next_line'
+#  Last modified 2022-09-27 03:52:01.6081156
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -c $< -I./ -o $@
+
+# Not a target:
+util.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=22/1024=2%, Rehash=0, Collisions=0/67=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 40 / storage = 392 B / avg = 9 B
+# current buf: size = 8162 B / used = 392 B / count = 40 / avg = 9 B
+
+# strcache performance: lookups = 77 / hit rate = 48%
+# hash-table stats:
+# Load=40/8192=0%, Rehash=0, Collisions=1/77=1%
+# Finished Make data base on Tue Sep 27 03:52:11 2022
+
+ 

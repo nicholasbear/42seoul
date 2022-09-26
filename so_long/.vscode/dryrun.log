@@ -1,0 +1,7 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/nicholasbear/42seoul/so_long'
+gcc -Wall -Wextra -Werror -c key_press.c -I./ -o key_press.o
+gcc -Wall -Wextra -Werror -c util.c -I./ -o util.o
+gcc -o so_long so_long.o get_next_line.o get_next_line_utils.o check_map.o image.o key_press.o util.o -L./ -lmlx -framework OpenGL -framework Appkit
+make: Leaving directory '/home/nicholasbear/42seoul/so_long'
+ 

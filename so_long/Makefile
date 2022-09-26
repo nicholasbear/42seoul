@@ -6,7 +6,7 @@ SRCS = so_long.c \
 		get_next_line_utils.c \
 		check_map.c \
 		image.c \
-		ket_press.c \
+		key_press.c \
 		util.c \
 
 OBJS = $(SRCS:.c=.o)
