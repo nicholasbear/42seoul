@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicholasbear <nicholasbear@student.42.f    +#+  +:+       +#+        */
+/*   By: wookim2 <wookim2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:26:10 by wookim2           #+#    #+#             */
-/*   Updated: 2022/09/27 03:49:06 by nicholasbea      ###   ########.fr       */
+/*   Updated: 2022/09/27 18:15:45 by wookim2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct s_game
 }	t_game;
 
 void	check_map_name(char *str);
-void	game_init(t_game *game);
+void	game_init(int fd, t_game *game);
 void	map_read(int fd, t_game *game);
 void	get_map_oneline(char *buf, int height, t_game *game);
 void    map_error(t_game *game);

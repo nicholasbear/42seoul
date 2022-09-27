@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicholasbear <nicholasbear@student.42.f    +#+  +:+       +#+        */
+/*   By: wookim2 <wookim2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 17:22:57 by wookim2           #+#    #+#             */
-/*   Updated: 2022/09/27 03:48:07 by nicholasbea      ###   ########.fr       */
+/*   Updated: 2022/09/27 18:15:08 by wookim2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	int			fd;
 	t_game	*game;
-	
+
 	if (argc != 2)
 		printf("Error not one map\n");
 	check_map_name(argv[1]);
@@ -24,8 +24,7 @@ int	main(int argc, char **argv)
 	if (fd < 0)
 		printf("Error no file\n");
 	game = (t_game *)malloc(sizeof(t_game));
-	map_read(fd, game);
-	game_init(game);
+	game_init(fd, game);
 	map_error(game);
 	mlx_hook(game->mlx_win, KEY_PRESS, 0, &keypress_event, game);
 	mlx_hook(game->mlx_win, KEY_EXIT, 0, &click_redcross, game);
@@ -52,11 +51,16 @@ void	check_map_name(char *str)
 		printf("not a ber file\n");
 }
 
-void	game_init(t_game *game)
+void	game_init(int fd, t_game *game)
 {
 	game->mlx = mlx_init();
 	game->img = img_init(game->mlx);
 	game->walk_count = 0;
+	game->e_count = 0;
+	game->c_count = 0;
+	game->p_count = 0;
+	game->point_count = 0;
+	map_read(fd, game);
 	game->mlx_win = mlx_new_window(game->mlx, game->width * 64, \
 					game->height * 64, "so_long");
 	setting_img(game);
@@ -72,11 +76,12 @@ void	map_read(int fd, t_game *game)
 	get_map_oneline(buf, height, game);
 	while (buf)
 	{
-		height++;
 		buf = get_next_line(fd);
 		if (!buf)
 			break ;
+		height++;
 		get_map_oneline(buf, height, game);
 	}
+	game->height = height;
 	close(fd);
 }

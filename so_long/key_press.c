@@ -42,7 +42,7 @@ void	press_key(t_game *game, int move)
 	else if (game->map[i + move] != '1' && game->map[i + move] != 'E')
 	{
 		game->map[i] = '0';
-		game->map[i - 1] = 'P';
+		game->map[i + move] = 'P';
 		game->walk_count += 1;
 		printf("%d\n", game->walk_count);
 		setting_img(game);
