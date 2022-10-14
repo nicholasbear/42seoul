@@ -1,4 +1,18 @@
-#include "ft_print.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wookim2 <wookim2@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/03 16:36:59 by wookim2           #+#    #+#             */
+/*   Updated: 2022/07/03 19:15:04 by wookim2          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+#include <stdio.h>
+#include <limits.h>
 
 static int	find_format(char const *s, va_list ap)
 {
@@ -9,7 +23,7 @@ static int	find_format(char const *s, va_list ap)
 		len += printf_c(ap);
 	else if (*s == 's')
 		len += printf_s(ap);
-    else if (*s == 'p')
+	else if (*s == 'p')
 		len += printf_p(ap);
 	else if (*s == 'd')
 		len += printf_di(ap);
@@ -18,15 +32,15 @@ static int	find_format(char const *s, va_list ap)
 	else if (*s == 'u')
 		len += printf_u(ap);
 	else if (*s == 'x')
-		len += printf_hex_lower(ap);
+		len += printf_x(ap);
 	else if (*s == 'X')
-		len += printf_hex_upper(ap);
-    else if (*s == '%')
-		len += printf_per();
+		len += printf_bigx(ap);
+	else if (*s == '%')
+		len += printf_obelus();
 	return (len);
 }
 
-static int	find_Obelus(char const *s, va_list ap)
+static int	find_obelus(char const *s, va_list ap)
 {
 	int	len;
 
@@ -54,7 +68,7 @@ int	ft_printf(char const *s, ...)
 	int		len;
 
 	va_start(ap, s);
-	len = find_Obelus(s, ap);
+	len = find_obelus(s, ap);
 	va_end(ap);
 	return (len);
 }
